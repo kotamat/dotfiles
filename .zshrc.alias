@@ -53,7 +53,7 @@ alias 'mc'='make clean'
 alias s='screen -U'
 alias sc='screen -S main'
 alias sn='screen'
-alias sl='screen -ls'
+#alias sl='screen -ls'
 alias sr='screen -r main'
 alias srr='screen -U -D -RR'
 
@@ -201,3 +201,16 @@ dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+# docker compose function
+#
+
+alias dcu="docker-compose up -d"
+
+alias dcr="docker-compose run --rm"
+
+alias dce="docker-compose exec"
+
+alias dcub="docker-compose up -d --build"
+
+alias dcb="docker-compose build"

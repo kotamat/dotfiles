@@ -1,6 +1,6 @@
 [user]
-  name = Tomohito Ozaki
-  email = ozaki@yuroyoro.com
+  name = kota-matsumoto
+  email = kota-matsumoto@altplus.co.jp
 [color]
   # colorの設定(以下のコマンドは自動で色つける)
   status = auto
@@ -38,6 +38,7 @@
   ft  = fetch
   ftp = fetch --prune
   up  = pull --rebase       # pull rebase
+  pl  = pull origin
   po  = push origin         # push origin
   pof = push -f origin      # force
   pu  = push -u origin      # push origin and set upstream
@@ -86,6 +87,7 @@
   lll = log --date=short --max-count=10 --pretty=format:'%Cgreen%h %cd %Cblue%cn%x09%Creset%s' # onelineでlogを出す
   oneline = log --pretty=oneline
   ranking = shortlog -s -n --no-merges
+  altered = !git log --oneline master..develop |  sed 's/[^0-9 ]//g' | awk '{print $2}' | sort -n | uniq
   # logをtree表示
   log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
   log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
