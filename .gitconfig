@@ -157,6 +157,10 @@
   chpk = cherry-pick # チンピク
   iss = issue # my extended command
 
+  # versioning
+  #vup = "!f() { git describe master | sed 's/[^0-9\.]//g' | xargs sh -c '~/.zsh/version_up.sh $@' ;}; f"
+  vup = !git describe master | sed 's/[^0-9\\.]//' | ~/.zsh/version_up.sh
+
   # git-風呂関連
   ff  = flow feature
   ffl = flow feature list
@@ -165,6 +169,8 @@
   ffc = flow feature checkout
   ffp = flow feature publish
   fr = flow release
+  frs = flow release start
+  frf = flow release finish -p
   fh  = flow hotfix
   fhl = flow hotfix list
   fhs = flow hotfix start
