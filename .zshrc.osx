@@ -27,10 +27,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
 
 # haskell
-export PATH=/Users/ozaki/Library/Haskell/bin:$PATH
+export PATH=/Users/matsumotokouta/Library/Haskell/bin:$PATH
 
 # scala
-export SCALA_HOME=/Users/ozaki/.svm/current/rt
+export SCALA_HOME=/Users/matsumotokouta/.svm/current/rt
 PATH=$SCALA_HOME/bin:$PATH
 export SCALA_DOC_HOME=$SCALA_HOME/../devel-docs/api/
 
@@ -79,7 +79,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 
 # Ruby
-# if [[ -s /Users/ozaki/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+# if [[ -s /Users/matsumotokouta/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null 2>&1 ; then eval "$(rbenv init -)"; fi
 

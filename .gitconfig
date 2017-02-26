@@ -1,6 +1,6 @@
 [user]
-  name = kota-matsumoto
-  email = kota-matsumoto@altplus.co.jp
+  name = kotamat
+  email = kota1861@gmail.com
 [color]
   # colorの設定(以下のコマンドは自動で色つける)
   status = auto
@@ -191,7 +191,7 @@
   generic = <Ctrl-B> move-page-up
 
 [ghq]
-	root = /Users/ozaki/src
+	root = /Users/matsumotokouta/src
 [rerere]
 	enabled = true
 [mergetool]
