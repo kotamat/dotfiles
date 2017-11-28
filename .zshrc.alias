@@ -83,6 +83,10 @@ alias gst="git log --date=short --max-count=1 --pretty=format:'%Cgreen%h %cd %Cb
 alias gc='git commit'
 alias gci='git commit -a'
 alias '偽ｔ'=git
+alias gcd='cd $(ghq root)/$(ghq list | peco)'
+alias gh='hub browse $(ghq list | peco | cut -d"/" -f 2,3)'
+alias gic='git issue create -m'
+alias gapa='echo -e "a\n*\nq\n" | git add -i && git add -p'
 
 # jq
 alias -g JQ='jq "."'
@@ -214,3 +218,41 @@ alias dce="docker-compose exec"
 alias dcub="docker-compose up -d --build"
 
 alias dcb="docker-compose build"
+alias dref="docker-compose up -d && docker-sync stop && docker-sync clean && docker-sync start"
+
+# intellij
+
+idea(){
+    nohup /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea $(cd "${1}" && /bin/pwd) &
+}
+
+## pgen
+# io.StdIn.readLine().map(c => (c.toByte+1).toChar)
+
+firefox(){
+    nohup /Applications/Firefox.app/Contents/MacOS/firefox -p
+}
+
+alias genAllPair="pict <(pbpaste) /d:\"|\" /a:~ | tr '\t' ', ' | pbcopy"
+
+scp-st() { scp $1 s-st:/var/www/vhosts/scouter_api/$1; }
+
+alias sync-domain="rsync -ahv vendor/reno-shelter/scouter_domain/src/* ../scouter_domain/src/ && rsync -ahv database/migrations/* ../scouter_domain/database/migrations/"
+
+alias mems="vm_stat | perl -ne '/page size of (\d+)/ and \$size=\$1; /Pages\s+([^:]+)[^\d]+(\d+)/ and printf(\"%-16s % 16.2f Mi\n\",  \"\$1:\",  \$2 * \$size / 1048576);'"
+
+alias noti='terminal-notifier -message "コマンド完了"'
+
+
+
+alias phpcoverage='./vendor/bin/phpunit --coverage-html storage/logs/clover.html && open storage/logs/clover.html/index.html'
+
+mkfac(){
+  php artisan make:factory ${1}Factory --model=Entities\\${1}
+}
+
+# highlight
+hl(){
+  syntax=${1:-js}
+  pbpaste | highlight --syntax ${syntax} -O rtf | pbcopy
+}

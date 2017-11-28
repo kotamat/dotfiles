@@ -90,6 +90,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " <C-a>でtrue/false切替。他色々
   NeoBundle 'taku-o/vim-toggle'
 
+  " editor config
+  NeoBundle 'editorconfig/editorconfig-vim'
+
 " }}}
 
 " Completion {{{
