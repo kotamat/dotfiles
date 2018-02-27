@@ -223,7 +223,7 @@ alias dref="docker-compose up -d && docker-sync stop && docker-sync clean && doc
 # intellij
 
 idea(){
-    nohup /Applications/IntelliJ\ IDEA.app/Contents/MacOS/idea $(cd "${1}" && /bin/pwd) &
+    nohup /Users/matsumotokouta/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/jetbrains-toolbox-launcher $(cd "${1}" && /bin/pwd) &
 }
 
 ## pgen

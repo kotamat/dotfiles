@@ -333,6 +333,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " http://thinca.hatenablog.com/entry/20110108/1294427418
   NeoBundle 'thinca/vim-localrc'
 
+  NeoBundle 'diepm/vim-rest-console'
+
 " }}}
 
 " ColorSchema{{{{
