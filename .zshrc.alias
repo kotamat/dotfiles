@@ -222,9 +222,9 @@ alias dref="docker-compose up -d && docker-sync stop && docker-sync clean && doc
 
 # intellij
 
-idea(){
-    nohup /Users/matsumotokouta/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/jetbrains-toolbox-launcher $(cd "${1}" && /bin/pwd) &
-}
+#idea(){
+#    nohup $HOME/Applications/JetBrains\ Toolbox/IntelliJ\ IDEA\ Ultimate.app/Contents/MacOS/jetbrains-toolbox-launcher $(cd "${1}" && /bin/pwd) &
+#}
 
 ## pgen
 # io.StdIn.readLine().map(c => (c.toByte+1).toChar)
