@@ -1,6 +1,6 @@
 [user]
-  name = kotamat
-  email = kota1861@gmail.com
+	name = kotamat
+	email = kota1861@gmail.com
 [color]
   # colorの設定(以下のコマンドは自動で色つける)
   status = auto
@@ -168,6 +168,7 @@
   fff = flow feature finish
   ffc = flow feature checkout
   ffp = flow feature publish
+  ffd = "!f() { git branch | grep feature | xargs git branch -D ;}; f"
   fr = flow release
   frs = flow release start
   frf = flow release finish -p
@@ -191,7 +192,7 @@
   generic = <Ctrl-B> move-page-up
 
 [ghq]
-	root = /Users/matsumotokouta/src
+	root = /Users/matsumotokouta/.go/src
 [rerere]
 	enabled = true
 [mergetool]
@@ -199,6 +200,9 @@
 [ruby]
 	version = 2.2.4
 [filter "lfs"]
+	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	required = true
+	process = git-lfs filter-process
+[credential]
+	helper = osxkeychain

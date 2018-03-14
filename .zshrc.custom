@@ -708,3 +708,19 @@ fi
 if [ -f /Users/kota-matsumoto/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/kota-matsumoto/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+
+# resolve yarn, npm bin path
+
+export PATH=$PATH:./node_modules/.bin
+export PATH=$PATH:./vendor/bin
+

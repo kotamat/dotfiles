@@ -34,12 +34,9 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(brew bundler capistrano coffee command-not-found extract gem git git-flow github heroku history history-substring-search lein mvn node npm pip python rails rake rbenv redis-cli rsync ruby svn thor urltools vagrant vi-mode vundle yum)
+plugins=(brew bundler capistrano coffee command-not-found extract gem git git-flow github heroku history history-substring-search lein mvn node npm yarn pip python rails rake rbenv redis-cli rsync ruby svn thor urltools vagrant vi-mode vundle yum laravel5 composer)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 source $HOME/.zshrc.custom
 
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

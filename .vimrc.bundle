@@ -90,6 +90,9 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " <C-a>でtrue/false切替。他色々
   NeoBundle 'taku-o/vim-toggle'
 
+  " editor config
+  NeoBundle 'editorconfig/editorconfig-vim'
+
 " }}}
 
 " Completion {{{
@@ -329,6 +332,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
   " local_vimrc の焼き直し localrc.vim 書いた - 永遠に未完成
   " http://thinca.hatenablog.com/entry/20110108/1294427418
   NeoBundle 'thinca/vim-localrc'
+
+  NeoBundle 'diepm/vim-rest-console'
 
 " }}}
 
