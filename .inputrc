@@ -20,3 +20,7 @@ set horizontal-scroll-mode on
 "\C-p": history-search-backward
 "\C-n": history-search-forward
 
+$if Python
+"\M-i": "    "
+"\M-u": "\d\d\d\d"
+$endif

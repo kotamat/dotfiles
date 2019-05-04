@@ -18,7 +18,10 @@ alias duh="du -h ./ --max-depth=1"
 alias su="su -l"
 
 # vim
+# alias v='nvim'
+# alias vi='nvim'
 alias v='vim'
+alias vi='vim'
 alias 'src'='exec zsh'
 alias -g V="| vim -"
 alias -g EV="| xargs --verbose sh -c 'vim \"\$@\" < /dev/tty'"
@@ -89,7 +92,8 @@ alias gic='git issue create -m'
 alias gapa='echo -e "a\n*\nq\n" | git add -i && git add -p'
 
 # jq
-alias -g JQ='jq "."'
+alias -g JQ='jq -C "."'
+alias -g LJQ='jq -C "." | less -R'
 
 function lessjq() {
   cat $1 | jq -C "." | less -R
@@ -141,7 +145,7 @@ alias sce='scala'
 alias ex='extract'
 
 alias ev='vi ~/dotfiles/.vimrc*'
-alias be='bundle exec'
+# alias be='bundle exec'
 
 grepvim() {
     XFS=`grep -ERUInl $* | uniq | xargs`
@@ -205,6 +209,9 @@ dbu() { docker build -t=$1 .; }
 
 # Show all alias related docker
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+
+# terraforming https://github.com/dtan4/terraforming
+alias terraforming='docker run --rm --name terraforming -e AWS_ACCESS_KEY_ID=$(aws configure get aws_access_key_id) -e AWS_SECRET_ACCESS_KEY=$(aws configure get aws_secret_access_key) -e AWS_REGION=$(aws configure get region) quay.io/dtan4/terraforming:latest terraforming'
 
 # docker compose function
 #
