@@ -58,7 +58,7 @@ call neobundle#begin(expand('~/.vim/bundle'))
   NeoBundle 'textobj-user'
 
   " vim-textobj-syntax : syntax hilightされたものをtext-objectに
-  NeoBundle 'kana/vim-textobj-syntax.git'
+  "NeoBundle 'kana/vim-textobj-syntax.git'
 
   " vim-textobj-plugins : いろんなものをtext-objectにする
   " obsolated
