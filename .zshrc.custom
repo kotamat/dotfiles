@@ -688,8 +688,12 @@ source ~/.zsh/percol.zsh
 #
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+# enyenv
+# gopath
+export GOENV_DISABLE_GOPATH=1
 eval "$(anyenv init -)"
 if [ -d ${HOME}/.anyenv ] ; then
+
 	export PATH="$HOME/.anyenv/bin:$PATH"
 	for D in `ls $HOME/.anyenv/envs`
 	do
